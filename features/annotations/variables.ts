@@ -7,6 +7,10 @@ because we already annotate variable with particular type
 
 - R3: If we do declaration and initialization on the same line 
 we don't need to annotate, TS will infer the type'
+
+-R4 : When we want a var to have a type that can't be inferred we use annotation
+
+- R5: When a function returns the any type and we need to clarify the value 
 */
 let account: number = 5;
 let speed: string = 'fast';
@@ -49,3 +53,14 @@ const logNumber: (num: number) => void = (num: number) => {
   console.log(num);
 };
 logNumber(3);
+
+// when to use annotations
+
+//1- Function that returns the 'any' type
+/* because TS can't predict what we can return 
+from a function it returns the type "any"
+*/
+const json = '{"x":"10", "y":"20}';
+const coordinates: { x: number; y: number } = JSON.parse(json);
+
+console.log(coordinates);
