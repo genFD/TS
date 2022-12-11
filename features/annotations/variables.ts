@@ -2,8 +2,11 @@
 
 - R1 : We use type annotation to describe what type a value is
 
-- R2 : cannot reassign variables to a different type
+- R2 : We cannot reassign variables to a different type
 because we already annotate variable with particular type
+
+- R3: If we do declaration and initialization on the same line 
+we don't need to annotate, TS will infer the type'
 */
 let account: number = 5;
 let speed: string = 'fast';
