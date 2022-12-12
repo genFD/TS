@@ -12,19 +12,19 @@ we don't need to annotate, TS will infer the type'
 
 - R5: When a function returns the any type and we need to clarify the value 
 */
-let account: number = 5;
-let speed: string = 'fast';
+const account = 5;
+const speed = 'fast';
 
 // built-in objects annotation syntax
-let now: Date = new Date();
+const now: Date = new Date();
 console.log(account);
 console.log(speed);
 console.log(now);
 
 //Array annotation syntax
 
-let colors: string[] = ['red', 'green', 'yellow'];
-let numbers: number[] = [1, 2, 3, 4, 5, 6];
+const colors: string[] = ['red', 'green', 'yellow'];
+const numbers: number[] = [1, 2, 3, 4, 5, 6];
 console.log(colors);
 console.log(numbers);
 
@@ -32,19 +32,19 @@ console.log(numbers);
 
 class Car {}
 
-let car: Car = new Car();
+const car: Car = new Car();
 console.log(car);
 
 //Object literal annotation syntax
 
-let point: { x: number; y: number } = {
+const point: { x: number; y: number } = {
   x: 10,
   y: 20,
 };
 
 console.log(point);
 
-// Functions annotation syntax
+// Functions (variable) annotation syntax
 // ----
 // what type of arguments f expect
 // what type of value the f returns
@@ -64,3 +64,29 @@ const json = '{"x":"10", "y":"20}';
 const coordinates: { x: number; y: number } = JSON.parse(json);
 
 console.log(coordinates);
+
+//2- When we declare a variable on one line and initialize it later
+/*
+ */
+
+const words = ['blue', 'reunion', 'glory'];
+
+let foundWord: boolean;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === 'reunion') {
+    foundWord = true;
+  }
+}
+console.log(foundWord);
+// 3- variables whose type cannot be inferred
+
+const numbersv2 = [-10, -1, 12];
+let aboveZero: boolean | number;
+
+for (let i = 0; i < numbersv2.length; i++) {
+  if (numbersv2[i] > 0) {
+    aboveZero = numbersv2[i];
+  }
+}
+console.log(aboveZero);
