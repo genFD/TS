@@ -1,3 +1,7 @@
+/*
+GOAL: Demonstrate How to annotate an object
+*/
+
 const profile = {
   namee: 'alex',
   age: 20,
@@ -17,3 +21,4 @@ const {
   namee: string;
   coords: { lat: number; lng: number };
 } = profile;
+//

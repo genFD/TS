@@ -1,12 +1,15 @@
 //function annotation syntax
 /*
+
+GOAL: Demonstrate How to annotate a function
+
 R1:
 Even though we get the benefit of type inference 
 for the return value we are not going to use it because 
 we could easily make the mistake of not returning a value from the 
 function and if so TS will return an error
 
-R1:
+R2:
 if we don't return a value from the function we can 
 annotate using the void type'
 */
@@ -18,6 +21,7 @@ annotate using the void type'
 const add = (a: number, b: number): number => {
   return a + b;
 };
+
 add(2, 3);
 
 // named function declarations

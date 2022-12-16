@@ -1,9 +1,9 @@
 /* Variables declarations with types annotation
+GOAL: Demonstrate How to annotate a variable
 
 - R1 : We use type annotation to describe what type a value is
 
 - R2 : We cannot reassign variables to a different type
-because we already annotate variable with particular type
 
 - R3: If we do declaration and initialization on the same line 
 we don't need to annotate, TS will infer the type'
@@ -11,6 +11,8 @@ we don't need to annotate, TS will infer the type'
 -R4 : When we want a var to have a type that can't be inferred we use annotation
 
 - R5: When a function returns the any type and we need to clarify the value 
+
+
 */
 const account = 5;
 const speed = 'fast';
@@ -30,7 +32,7 @@ console.log(numbers);
 
 // Classes annotation syntax
 
-class Car {}
+// class Car {}
 
 const car: Car = new Car();
 console.log(car);
@@ -90,3 +92,4 @@ for (let i = 0; i < numbersv2.length; i++) {
   }
 }
 console.log(aboveZero);
+// exo

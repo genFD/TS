@@ -1,4 +1,3 @@
-// first version
 /*
 Points: 
 1. Using Interface helps to fix long type annotations
@@ -21,6 +20,8 @@ shape of various different objects and this allows for code reuse
 --> In order to call those functions we're going to make sure that we have
 objects and classes that implement that interface
 */
+
+// first version
 
 const oldCivic = {
   name: 'Civic',
