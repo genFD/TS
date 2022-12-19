@@ -24,12 +24,18 @@ export class Map {
   }
   // if you want to be an argument to addMarker you have to be of type Mappable
   addMarker(item: Mappable): void {
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat: item.location.lat,
         lng: item.location.lng,
       },
+    });
+    marker.addListener('click', () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: 'Hi there!',
+      });
+      infoWindow.open(this.googleMap, marker);
     });
   }
 }
