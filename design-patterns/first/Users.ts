@@ -8,8 +8,8 @@
  attached to it
  */
 import { faker } from '@faker-js/faker';
-
-export class User {
+import { Mappable } from './Map';
+export class User implements Mappable {
   name: string;
   location: {
     lng: number;
@@ -21,5 +21,8 @@ export class User {
       lat: parseFloat(faker.address.latitude()),
       lng: parseFloat(faker.address.longitude()),
     };
+  }
+  markerContent(): string {
+    return `User name is ${this.name}`;
   }
 }
